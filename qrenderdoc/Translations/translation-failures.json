@@ -1,0 +1,20 @@
+[
+  {
+    "sources": [
+      "NOTE: Injection must happen <b>immediately</b> after the process starts, before any graphics API has been initialized."
+    ],
+    "error": "protected token missing"
+  },
+  {
+    "sources": [
+      "<p>A crash happened while RenderDoc was injected into your application. It's not feasible to tell whether the crash was in your application or in RenderDoc's capturing code. The minidump <a href=\"%1\">in the zip</a> might show the problem.</p><p>If you don't think your application crashed on its own please take a moment to look over this form to check what has been gathered then send it off so that RenderDoc can get better!</p>"
+    ],
+    "error": "HTML mismatch"
+  },
+  {
+    "sources": [
+      "<p>The contents of the report can be found <a href=\"%1\">in this zip</a> which you can edit/censor if you wish.</p>"
+    ],
+    "error": "HTML mismatch"
+  }
+]

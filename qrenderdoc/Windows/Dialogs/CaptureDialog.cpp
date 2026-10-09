@@ -252,8 +252,8 @@ void CaptureDialog::SetInjectMode(bool inject)
 
     fillProcessList();
 
-    ui->launch->setText(lit("Inject"));
-    this->setWindowTitle(lit("Inject into Process"));
+    ui->launch->setText(tr("Inject"));
+    this->setWindowTitle(tr("Inject into Process"));
   }
   else
   {
@@ -265,8 +265,8 @@ void CaptureDialog::SetInjectMode(bool inject)
 
     ui->globalGroup->setVisible(m_Ctx.Config().AllowGlobalHook);
 
-    ui->launch->setText(lit("Launch"));
-    this->setWindowTitle(lit("Launch Application"));
+    ui->launch->setText(tr("Launch"));
+    this->setWindowTitle(tr("Launch Application"));
   }
 }
 

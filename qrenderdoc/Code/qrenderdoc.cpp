@@ -32,6 +32,7 @@
 #include <QStandardPaths>
 #include <QSysInfo>
 #include "Code/CaptureContext.h"
+#include "Code/ChineseTranslation.h"
 #include "Code/QRDUtils.h"
 #include "Code/Resources.h"
 #include "Code/pyrenderdoc/PythonContext.h"
@@ -324,6 +325,11 @@ int main(int argc, char *argv[])
 #endif
 
   QApplication application(argc, argv);
+
+  // The local build defaults to Chinese. Set RENDERDOC_UI_LANGUAGE=en for the original UI.
+  ChineseTranslation chinese;
+  if(qgetenv("RENDERDOC_UI_LANGUAGE") != QByteArray("en"))
+    application.installTranslator(&chinese);
 
   QCommandLineParser parser;
   parser.setApplicationDescription(tr("Qt UI for RenderDoc"));

@@ -5583,7 +5583,7 @@ void BufferViewer::updateLabelsAndLayout()
     }
     else
     {
-      setWindowTitle(m_Ctx.GetResourceName(m_BufferID) + lit(" - Contents"));
+      setWindowTitle(m_Ctx.GetResourceName(m_BufferID) + tr(" - Contents"));
     }
   }
 }

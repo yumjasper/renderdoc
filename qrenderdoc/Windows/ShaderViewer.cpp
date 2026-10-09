@@ -237,7 +237,7 @@ ShaderViewer::ShaderViewer(ICaptureContext &ctx, QWidget *parent)
 
   m_FindResults = MakeEditor(lit("findresults"), QString(), SCLEX_NULL);
   m_FindResults->setReadOnly(true);
-  m_FindResults->setWindowTitle(lit("Find Results"));
+  m_FindResults->setWindowTitle(tr("Find Results"));
 
   // we create this up front so its state stays persistent as much as possible.
   m_FindReplace = new FindReplace(m_Scintillas, this);
@@ -495,7 +495,7 @@ void ShaderViewer::editShader(ResourceId id, ShaderStage stage, const QString &e
 
   m_Errors = MakeEditor(lit("errors"), QString(), SCLEX_NULL);
   m_Errors->setReadOnly(true);
-  m_Errors->setWindowTitle(lit("Errors"));
+  m_Errors->setWindowTitle(tr("Errors"));
 
   // remove margins
   m_Errors->setMarginWidthN(0, 0);

@@ -4589,7 +4589,7 @@ void EventBrowser::CreateFilterDialog()
 
   saveFilter->setMenu(importExportMenu);
 
-  explainTitle->setText(lit("Show an event if:"));
+  explainTitle->setText(tr("Show an event if:"));
 
   m_FilterSettings.Notes->setWordWrap(true);
 

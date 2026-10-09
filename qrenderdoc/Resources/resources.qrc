@@ -173,4 +173,7 @@
         <file>bookmark_blue.png</file>
         <file>bookmark_blue@2x.png</file>
     </qresource>
+    <qresource prefix="/translations">
+        <file alias="zh_CN.json">../Translations/zh_CN.json</file>
+    </qresource>
 </RCC>

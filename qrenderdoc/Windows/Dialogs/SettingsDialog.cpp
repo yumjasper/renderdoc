@@ -1064,7 +1064,7 @@ bool SettingsDialog::editTool(int existing, ShaderProcessingTool &tool)
   QHBoxLayout executableLayout;
 
   QLineEdit executableEdit;
-  executableEdit.setPlaceholderText(lit("tool"));
+  executableEdit.setPlaceholderText(tr("tool"));
   executableEdit.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
   executableEdit.setMinimumHeight(20);
   QToolButton executableBrowse;

@@ -211,7 +211,7 @@ PythonShell::PythonShell(ICaptureContext &ctx, QWidget *parent)
     m_FindResults->usePopUp(SC_POPUP_NEVER);
     m_FindResults->setWrapMode(SC_WRAP_WORD);
     m_FindResults->setReadOnly(true);
-    m_FindResults->setWindowTitle(lit("Find Results"));
+    m_FindResults->setWindowTitle(tr("Find Results"));
   }
 
   m_FindReplace->setFindIndicator(2);

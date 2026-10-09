@@ -524,7 +524,7 @@ void Analytics::DocumentReport()
 
   {
     QDialog dialog;
-    dialog.setWindowTitle(lit("Sample Analytics Report"));
+    dialog.setWindowTitle(QCoreApplication::translate("Analytics", "Sample Analytics Report"));
     dialog.setWindowFlags(dialog.windowFlags() & ~Qt::WindowContextHelpButtonHint);
     dialog.setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     dialog.setFixedSize(600, 500);
