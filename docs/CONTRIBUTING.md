@@ -1,52 +1,52 @@
-# Contributing to RenderDoc
+# 为 RenderDoc 贡献
 
-This document is split up and organised into several sections to aid reading and linking. For small changes like one-line fixes or minor tweaks then you can just read the [quick start section](#quick-start) below.
+本文档被拆分并组织成若干章节，以便阅读和链接。对于像一行修复或小调整这样的小改动，你只需要阅读下面的[快速开始](#quick-start)章节即可。
 
-Don't worry about reading all of these documents end-to-end and getting everything perfect the first time. The point of this information isn't to be restrictive about rules and reject contributions, but to give people guidance and help about how to contribute. I'm happy to help out with any changes needed to get your PR ready to merge, until you get the hang of things. If you're unfamiliar with git and need help making any changes, feel free to ask as well!
+不用担心里程碑式的从头到尾读完所有文档、第一次就做到完美。这些信息的目的不是用规则来限制和拒绝贡献，而是给人们提供如何贡献的指引和帮助。我很乐意帮忙处理让你的 PR 达到可合并状态所需的任何改动，直到你熟悉为止。如果你不熟悉 git、需要帮助来做出任何改动，也随时可以来问！
 
-If you're a regular contributor or if you have a larger amount of code to change, please do read through these as it will make life easier for everyone if you to follow along with these guidelines from the start.
+如果你是常规贡献者，或者有较多代码要改，请务必把这些读一遍，因为你从一开始就遵循这些准则，会让所有人的工作都更轻松。
 
-## Code of Conduct
+## 行为准则
 
-I want to ensure that anyone can contribute to RenderDoc with only the next bug to worry about. For that reason the project has adopted the [contributor covenent](CODE_OF_CONDUCT.md) as a code of conduct to be enforced for anyone taking part in RenderDoc development. This includes any comments on issues or any public discussion e.g. in the #renderdoc IRC channel or discord server.
+我希望确保任何人都能为 RenderDoc 做贡献，而只需担心下一个 bug。因此项目采用了 [contributor covenent](CODE_OF_CONDUCT.md) 作为行为准则，对参与 RenderDoc 开发的每个人都强制执行。这包括对 issue 的任何评论，或任何公开讨论，例如在 #renderdoc IRC 频道或 discord 服务器中。
 
-If you have any queries or concerns in this regard you can get in touch with me [directly over email](mailto:baldurk@baldurk.org).
+如果你在这方面有任何疑问或顾虑，可以[直接通过邮件](mailto:baldurk@baldurk.org)联系我。
 
-## Use of LLMs / "AI"
+## 关于 LLM / "AI" 的使用
 
-Strictly no use whatsoever of LLMs or any similar technology is allowed for any code contributed to RenderDoc. There are no exceptions to this rule.
+严格禁止将 LLM 或任何类似技术用于任何贡献给 RenderDoc 的代码。此规则没有例外。
 
-## Acceptable use of RenderDoc
+## RenderDoc 的合理使用
 
-RenderDoc is a tool intended for debugging your own projects and programs, those to which you have true ownership of. Use and abuse of RenderDoc for illegal or unethical uses including but not limited to capturing copyrighted programs that you do not own the rights to will not be tolerated. Any questions or issues related to any such use will not be answered and no support will be provided.
+RenderDoc 是一个用于调试你自己的项目和程序的工具，是那些你真正拥有所有权的项目。不允许将 RenderDoc 用于非法或不道德的用途，包括但不限于捕获你不拥有版权的受版权保护的程序。与任何此类用途相关的任何问题或事项都将不予回答，也不提供任何支持。
 
-## Copyright / Contributor License Agreement
+## 版权 / 贡献者许可协议
 
-Any code you submit will become part of the repository and be distributed under the [RenderDoc license](../LICENSE.md). By submitting code to the project you agree that the code is your own work and that you have the ability to give it to the project.
+你提交的任何代码都会成为仓库的一部分，并在 [RenderDoc 许可证](../LICENSE.md) 下分发。通过向项目提交代码，你同意该代码是你自己的作品，并且你有能力将它贡献给项目。
 
-You also agree by submitting your code that you grant all transferrable rights to the code to the project maintainer, including for example re-licensing the code, modifying the code, distributing in source or binary forms. Specifically this includes a requirement that you assign copyright to the project maintainer (Baldur Karlsson). For this reason, do not modify any copyright statements in files in any PRs.
+你还需要通过提交代码，同意将代码的所有可转让权利授予项目维护者，例如包括重新授权代码、修改代码、以源码或二进制形式分发。具体来说，这包括你须将版权转让给项目维护者（Baldur Karlsson）。因此，不要在任何 PR 中修改文件里的版权声明。
 
-## Contributing information
+## 贡献信息
 
-1. [Dependencies](CONTRIBUTING/Dependencies.md)
-2. [Compiling](CONTRIBUTING/Compiling.md)
-3. [Preparing commits](CONTRIBUTING/Preparing-Commits.md)
-4. [Developing a change](CONTRIBUTING/Developing-Change.md)
-5. [Testing](CONTRIBUTING/Testing.md)
-6. [Code Explanation](CONTRIBUTING/Code-Explanation.md)
-7. [Filing issues](CONTRIBUTING/Filing-Issues.md)
-8. [Asking Questions](CONTRIBUTING/Questions.md)
+1. [依赖](CONTRIBUTING/Dependencies.md)
+2. [编译](CONTRIBUTING/Compiling.md)
+3. [准备提交](CONTRIBUTING/Preparing-Commits.md)
+4. [开发一个改动](CONTRIBUTING/Developing-Change.md)
+5. [测试](CONTRIBUTING/Testing.md)
+6. [代码说明](CONTRIBUTING/Code-Explanation.md)
+7. [提交 issue](CONTRIBUTING/Filing-Issues.md)
+8. [提问](CONTRIBUTING/Questions.md)
 
-## Quick Start
+## 快速开始
 
-The two things you'll need to bear in mind for a small change are the [commit message](CONTRIBUTING/Preparing-Commits.md#commit-messages) and [code formatting](CONTRIBUTING/Preparing-Commits.md#code-formatting).
+对于小改动，你需要注意两件事：[提交信息](CONTRIBUTING/Preparing-Commits.md#commit-messages)和[代码格式](CONTRIBUTING/Preparing-Commits.md#code-formatting)。
 
-Commit messages should have a first line with a **maximum of 72 characters**, then a gap, then if you need it a longer explanation in any format you want. The reason for this is that limiting the first line to 72 characters means that `git log` and github's history always displays the full message without it being truncated.
+提交信息的第一行应**最多 72 个字符**，然后空一行，如果你需要的话再写更长的说明，格式随你。这样做的原因是，把第一行限制在 72 个字符内，可以让 `git log` 和 github 的历史记录始终完整显示信息而不会被截断。
 
-For more information, check the section about [commit messages](CONTRIBUTING/Preparing-Commits.md#commit-messages).
+更多信息请查看[提交信息](CONTRIBUTING/Preparing-Commits.md#commit-messages)章节。
 
-Code should be formatted using **clang-format 15.0**. The reason we fix a specific version of clang-format is that unfortunately different versions can format code in different ways using the same config file, so this would cause problems with automatic verification of code formatting.
+代码应使用 **clang-format 15.0** 进行格式化。我们固定一个特定版本的 clang-format，是因为遗憾的是不同版本用相同的配置文件可能会以不同方式格式化代码，这会给代码格式的自动校验带来问题。
 
-For more information, check the section about [code formatting](CONTRIBUTING/Preparing-Commits.md#code-formatting).
+更多信息请查看[代码格式](CONTRIBUTING/Preparing-Commits.md#code-formatting)章节。
 
-**DO NOT** create "draft" pull requests ever. These are a pointless anti-feature from github and provide zero value and have zero purpose. If your code is not ready to merge, do not create a pull request at all.
+**不要**创建"草稿（draft）"pull request。这是 github 一个毫无意义的反功能，没有任何价值，也没有任何用途。如果你的代码还没准备好合并，那就根本不要创建 pull request。

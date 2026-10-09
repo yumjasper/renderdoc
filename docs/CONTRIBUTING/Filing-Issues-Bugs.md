@@ -1,51 +1,51 @@
-# Filing bug reports
+# 提交 bug 报告
 
-Sorry that you've run into a bug! I'd like to be able to fix it, but first you need to fill out a good bug report to ensure I can understand the problem.
+很抱歉你遇到了 bug！我希望能够修复它，但首先你需要填写一份好的 bug 报告，以确保我能理解问题。
 
-:warning: **PLEASE NOTE: YOU MUST USE THE PROVIDED ISSUE TEMPLATE!** :warning:
+:warning: **请注意：你必须使用所提供的 issue 模板！** :warning:
 
-When filing a bug please click 'Get started' next to the 'Bug report' entry. This document explains the sections in the issue template and what you should put in them.
+提交 bug 时，请点击 'Bug report' 条目旁边的 'Get started'。本文档解释 issue 模板中的各个章节以及你应该填入的内容。
 
-# General guidance
+# 通用指引
 
-You can't provide too much information, and it's quite common to provide too little information. The more information you can provide the better I can determine the bug.
+你不会提供太多信息，而提供太少信息则相当常见。你能提供的信息越多，我就越能判断这个 bug。
 
-Avoid the temptation to guess or assume what the problem is based on what you're seeing, unless you have dived into the code to find out. It's probably not the case that RenderDoc crashes if you read a texture in a pixel shader. Most graphics programs do that! It's probably something more specific than that which is hard to identify without debugging. It's fine not to know what the problem is because that's my job! Just give as much information as possible.
+不要基于你所看到的现象去猜测或假设问题是什么，除非你已经深入代码查明了。比如"如果在像素着色器里读取一个纹理，RenderDoc 就会崩溃"很可能并不是真的。大多数图形程序都会那么做！问题很可能是更具体的东西，不调试很难确定。不知道问题是什么也没关系，因为那是我的工作！只要尽可能提供信息就行。
 
-If you have time, testing the latest nightly build of RenderDoc is a good idea since the bug you're reporting may have been fixed already. It's also a good idea to update your graphics drivers as some problems are caused by out of date drivers. If the problem you're seeing is new and wasn't present in an older version of RenderDoc, it would be extremely helpful to know approximately when the problem started. You can download any historical nightly build to test with.
+如果你有时间，测试最新的 RenderDoc 每日构建版是个好主意，因为你报告的 bug 可能已经被修复了。更新你的图形驱动也是个好主意，因为有些问题是由过时的驱动引起的。如果你看到的问题是新的、在旧版 RenderDoc 中不存在，那么知道问题大约何时开始出现将非常有帮助。你可以下载任何历史每日构建版来测试。
 
-If you really want to go in-depth there is a lot of writing online about how to make good bug reports! The classic that covers a lot is [Asking smart questions](http://www.catb.org/esr/faqs/smart-questions.html).
+如果你真的想深入了解，网上有大量关于如何写出好 bug 报告的文章！涵盖内容最多的经典之作是 [Asking smart questions](http://www.catb.org/esr/faqs/smart-questions.html)。
 
-Below is guidance for each section of the issue template.
+下面是 issue 模板各章节的指引。
 
-# Description of Bug
+# Bug 描述
 
-In the description section you can explain what kind of problem you're running into. The golden rule for this is to describe what you actually see happening, and then describe what you'd expect to see instead.
+在描述章节中，你可以解释你遇到的是什么问题。黄金法则是描述你实际看到发生了什么，然后描述你期望看到什么。
 
-The point here is to make it clear to anyone what the bug is, because unless you describe it not everyone may understand what the problem is. If you describe what you're trying to do and where the problem arises, compared to what you would expect to happen if everything worked, it's easier to understand.
+这里的重点是把 bug 是什么说清楚给任何人听，因为除非你描述出来，否则不是每个人都能理解问题所在。如果你描述你想做什么、问题出在哪里，与一切正常时你期望发生什么相比，会更容易理解。
 
-This is mostly relevant for bugs where something doesn't behave right rather than if something crashes where it's clear what is going wrong, but it's still useful information.
+这主要适用于某些行为不正确的 bug，而不是那些崩溃、情况一目了然的 bug，但即便如此，它仍是有用的信息。
 
-# Steps to reproduce
+# 复现步骤
 
-This section is the most important one!
+这一章是最重要的！
 
-In order to be able to fix a bug I need to first reproduce it to understand what goes wrong. You need to describe the steps taken.
+为了能修复 bug，我首先需要复现它，才能理解哪里出了问题。你需要描述所采取的步骤。
 
-Be sure that your repro steps really are steps that anyone can follow. Most of the time these repro steps will include "load my capture" or "capture my application". That is totally fine, but if you say that then you **must** upload and share the capture or the application. If you don't then I can't follow the steps, and they are not useful!
+务必确保你的复现步骤真的任何人都能照做。大多数时候这些复现步骤会包含"加载我的抓帧文件"或"捕获我的应用程序"。这完全没问题，但如果你这么说了，你就**必须**上传并分享那个抓帧文件或应用程序。如果你不这么做，我就无法照做，这些步骤也就没有用！
 
-Github has a file size limit for uploaded files. In most cases your capture or application will be too large, so you can use a free online service such as dropbox, google drive, mega, or others to share your files.
+Github 对上传文件有大小限制。多数情况下你的抓帧文件或应用程序都会太大，所以你可以使用免费的在线服务，如 dropbox、google drive、mega 等来分享你的文件。
 
-If you want to share your capture or application privately then please [email me](mailto:baldurk@baldurk.org?subject=RenderDoc%20bug) with it.
+如果你想私下分享你的抓帧文件或应用程序，请[给我发邮件](mailto:baldurk@baldurk.org?subject=RenderDoc%20bug)。
 
-When you have no problems sharing these, please do so as soon as you open your issue. If you open the issue without any reproducing materials, then in many cases I'll have to reply to ask for them anyway!
+当你分享它们没有问题时，请在开 issue 时尽快分享。如果你开 issue 时没有任何复现材料，很多时候我还是得回复来索要它们！
 
-If you cannot share your capture or application even privately, then that's understandable. If that's the case please say up front that you can't share any such materials. In this case you have to provide as much information as you possibly can about what your program is doing and where the problem begins - I'll have to start guessing what the problem might be and the more information I have to work with the better my guesses can be.
+如果你即使私下也不能分享你的抓帧文件或应用程序，那也可以理解。如果是这样，请一开始就说明你不能分享任何此类材料。在这种情况下，你必须尽可能多地提供关于你的程序在做什么、问题从哪里开始的信息，我就得开始猜测问题可能是什么，而我掌握的信息越多，猜测就能越准。
 
-# Environment
+# 环境
 
-Please update the environment section for at least the three items present, the RenderDoc version you are using, your OS, and the graphics API(s) that you are seeing the bug on.
+请至少更新环境章节中现有的三项内容：你使用的 RenderDoc 版本、你的操作系统，以及你遇到 bug 的图形 API。
 
-For the RenderDoc version if you're using a nightly build include the date or commit hash for that nightly build, since the v1.X number is not unique.
+对于 RenderDoc 版本，如果你使用的是每日构建版，请包含该每日构建的日期或提交哈希，因为 v1.X 编号并不唯一。
 
-Giving more details here such as your GPU and driver version can't hurt, but you must include the three above since this gives important information about where the problem might be.
+在这里提供更多细节（如你的 GPU 和驱动版本）不会有坏处，但你必须包含上面三项，因为这会给出关于问题可能在哪里的重要信息。

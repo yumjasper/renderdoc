@@ -1,23 +1,23 @@
-# Filing feature requests
+# 提交功能请求
 
-:warning: **PLEASE NOTE: YOU MUST USE THE PROVIDED ISSUE TEMPLATE!** :warning:
+:warning: **请注意：你必须使用所提供的 issue 模板！** :warning:
 
-When filing a bug please click 'Get started' next to the 'Feature request' entry. Below is guidance for each section of the issue template.
+提交请求时，请点击 'Feature request' 条目旁边的 'Get started'。下面是 issue 模板各章节的指引。
 
-# Description of Feature
+# 功能描述
 
-When writing the description of a feature request, it's important to describe what your end goal is. If you describe only what you think the solution should be then that makes it harder to understand what you're really after. This is often known as [the XY problem](http://xyproblem.info/). You can of course describe the solution you have in mind as well, just be sure not to _only_ describe that solution.
+撰写功能请求的描述时，重要的是描述你的最终目标。如果你只描述你认为的解决方案应该是什么，那会让别人更难理解你真正想要什么。这通常被称为 [XY 问题](http://xyproblem.info/)。你当然也可以描述你想到的解决方案，只要确保不要_只_描述那个解决方案。
 
-Sometimes there is an improvement that may work for you but may solve other problems as well. Or perhaps the solution you have in mind might have unintended side-effects. If you describe what your workflow is and what you're trying to do then it's much easier to understand where you're coming from.
+有时某个改进可能对你有效，但也能解决其他问题。又或者你想到的解决方案可能有意外副作用。如果你描述你的工作流是什么、你想做什么，就更容易理解你的出发点。
 
-This can also be a reason why feature requests are turned down. If the problem you are running into is particularly niche, or you want behaviour one way but it's mutually exclusive with behaviour a different way that is generally better for users as a whole, that may be reason to turn down the request. Features don't come for free and even adding alternate options still leads to maintenance and UX burdens.
+这也可能是功能请求被拒绝的原因。如果你遇到的问题特别小众，或者你想要一种行为，但它与另一种总体上对用户更好的行为互斥，那可能就是拒绝该请求的理由。功能不是白来的，即使添加备选选项也会带来维护和 UX 负担。
 
-If this happens please be aware that it's not a criticism of your use case, and if your change is small or you feel adventurous you could change RenderDoc's source and recompile it to behave as you'd like.
+如果发生这种情况，请理解这不是对你用例的批评，如果你的改动很小，或者你觉得自己有冒险精神，你可以修改 RenderDoc 源码并重新编译，让它按你想要的方式运行。
 
-If you can upload a capture that exhibits exactly what problem you're trying to solve that would be very welcome :smile:.
+如果你能上传一个恰好展示你试图解决问题所在的抓帧文件，那将非常受欢迎 :smile:。
 
-# Environment
+# 环境
 
-Please update the environment section to at least list the main three items - the RenderDoc version you are using, your OS, and the graphics API(s) you are interested in.
+请至少更新环境章节，列出主要三项：你使用的 RenderDoc 版本、你的操作系统，以及你感兴趣的图形 API。
 
-This gives context to what you're asking for, even in cases where the feature may apply to all APIs or OSs. The RenderDoc version is also relevant in case you haven't tried the latest version where something may have changed, or if there has been work in this area since the last version was released.
+这为你所请求的内容提供了上下文，即使该功能可能适用于所有 API 或 OS。RenderDoc 版本也相关，以防你还没有试过最新版本、某些东西可能已经改变，或者自上个版本发布以来这一领域已有工作。

@@ -1,9 +1,9 @@
-# Asking questions
+# 提问
 
-Sometimes you have a general question that you'd like to ask which isn't exactly a bug or a feature request.
+有时你有一个通用问题想请教，它既不完全是一个 bug，也不完全是一个功能请求。
 
-In these cases, filing an issue on github isn't generally the best way to do it since questions might turn into a conversation or a discussion and don't have a defined scope.
+在这种情况下，在 github 上开 issue 通常不是最好的方式，因为问题可能演变成一场对话或讨论，没有一个明确的边界。
 
-Instead these questions can be asked in one of RenderDoc's community spaces, such as in [#renderdoc on OFTC IRC](https://webchat.oftc.net/?channels=renderdoc) or on RenderDoc's [Discord server](https://discord.gg/ahq6yRB). If your question is more private you can [email me directly at baldurk@baldurk.org](mailto:baldurk@baldurk.org).
+相反，这些问题可以在 RenderDoc 的社区空间之一提出，例如 [OFTC IRC 上的 #renderdoc](https://webchat.oftc.net/?channels=renderdoc)，或 RenderDoc 的 [Discord 服务器](https://discord.gg/ahq6yRB)。如果你的问题更私密，可以[直接发邮件给 baldurk@baldurk.org](mailto:baldurk@baldurk.org)。
 
-Please note that in all these places RenderDoc's [code of conduct](../CODE_OF_CONDUCT.md) still applies.
+请注意，在所有这些地方，RenderDoc 的[行为准则](../CODE_OF_CONDUCT.md)仍然适用。

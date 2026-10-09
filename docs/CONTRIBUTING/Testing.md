@@ -1,5 +1,5 @@
-# Testing
+# 测试
 
-At the moment the testing of any features and changes is pretty much ad-hoc. I've been working on a proper test suite that will test both API capture/replay support as well as the analysis features.
+目前对任何功能和改动的测试基本是临时性的。我一直在开发一套正式的测试套件，它将同时测试 API 的捕获/回放支持以及分析功能。
 
-Until then, test any changes you make around the area that you've tested - if I have any particular suggestions on testing I will probably bring it up in the pull request.
+在那之前，请围绕你已测试的区域来测试你所做的任何改动。如果我对测试有任何具体建议，我可能会在 pull request 中提出来。

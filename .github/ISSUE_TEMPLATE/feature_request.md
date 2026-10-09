@@ -1,30 +1,30 @@
 ---
 name: Feature request
-about: Suggest an improvement or new feature be added to RenderDoc
+about: 建议为 RenderDoc 添加一项改进或新功能
 ---
 <!--
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ 
-IF YOU DO NOT FOLLOW THE GUIDELINES, OR DO NOT USE THE TEMPLATE BELOW, YOUR ISSUE WILL BE CLOSED! NO EXCEPTIONS!
+如果你不遵循准则，或不使用下面的模板，你的 issue 将被关闭！没有例外！
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ 
 
-The template below shows what you need to include in a good feature request, and you MUST use it. More information in the docs:
+下面的模板展示了一份好的功能请求需要包含哪些内容，并且你必须使用它。更多信息见文档：
 https://github.com/baldurk/renderdoc/blob/v1.x/docs/CONTRIBUTING/Filing-Issues.md
 
-I'm happy to help, but you have to ensure I fully understand what you want and have the information I need. If you're unsure, please read the guide above for full information on what is expected for filing issues.
+我很乐意帮忙，但你必须确保我完全理解你想要什么，并拥有我需要的信息。如果你不确定，请阅读上面的指南，了解提交 issue 需要哪些完整信息。
 -->
 
-## Description of Feature
+## 功能描述
 
-<!-- Here you should not just describe what feature you want. Please describe the context of what you are trying to do or what workflow you would like, and why you can't do that with RenderDoc today. -->
+<!-- 在这里你不应只描述你想要什么功能。请描述你试图做什么的上下文，或你希望的工作流，以及为什么今天用 RenderDoc 做不到。 -->
 
-<!-- You can then separately describe a specific feature or solution you'd like to see to address that desire. -->
+<!-- 然后你可以单独描述一个你希望看到的、能满足该需求的具体功能或解决方案。 -->
 
-## Environment
+## 环境
 
-<!-- if you are running a nightly build, list the date or commit hash for the version -->
+<!-- 如果你运行的是每日构建版，请列出该版本的日期或提交哈希 -->
 
-* RenderDoc version: XXX
-* Operating System: XXX
-* Graphics API: XXX
+* RenderDoc 版本：XXX
+* 操作系统：XXX
+* 图形 API：XXX
 
-<!-- You should still list the details here so that the scope of the request can be understood. -->
+<!-- 你仍然应该在这里列出细节，以便理解该请求的范围。 -->

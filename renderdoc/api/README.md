@@ -1,6 +1,6 @@
-This folder can be extracted out and placed into your source tree if you want to use RenderDoc.
+如果你想使用 RenderDoc，这个文件夹可以被单独抽取出来放入你的源码树。
 
-* If you want to access RenderDoc while it's injected into your program, the app/ folder is what you want. This also contains functions for injecting RenderDoc into existing or new processes.
-* If you want to write a program that utilises RenderDoc's replay and analysis capabilities (e.g. writing a new UI, or an auto-testing/offline analysis tool), the replay/ folder is what you want.
+* 如果你想在 RenderDoc 注入你的程序时访问它，那么你需要的是 app/ 文件夹。它还包含将 RenderDoc 注入到现有或新进程的函数。
+* 如果你想编写一个利用 RenderDoc 回放和分析能力的程序（例如编写一个新界面，或一个自动测试/离线分析工具），那么你需要的是 replay/ 文件夹。
 
-You will need both folders if you want to launch processes with RenderDoc injected.
+如果你想要在注入 RenderDoc 的情况下启动进程，那么两个文件夹你都需要。

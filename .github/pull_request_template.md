@@ -1,25 +1,23 @@
 <!--
-Before submitting a pull request you are strongly recommended to read the
-docs/CONTRIBUTING.md file which gives some information on how to prepare a
-change:
+在提交 pull request 之前，强烈建议你阅读
+docs/CONTRIBUTING.md 文件，其中给出了一些关于如何准备
+改动的信息：
 
 https://github.com/baldurk/renderdoc/blob/v1.x/docs/CONTRIBUTING.md
 
-For small changes you don't have to read the document end to end, but should at
-least look at the sections on how to ensure your code and commits are formatted
-according to the style requirements.
+对于小改动，你不必从头到尾读完文档，但至少应
+看看关于如何确保你的代码和提交按风格要求格式化的章节。
 
-Do not create "draft" pull requests. It is a pointless waste of time - if your
-code is ready to reviewed you can make a normal pull request. If your code is
-not ready to be reviewed you should not make a pull request yet.
+不要创建"草稿（draft）"pull request。那纯属浪费时间：如果你的
+代码已准备好接受评审，你可以提一个普通的 pull request。如果你的代码
+还没准备好接受评审，你就不应提 pull request。
 
-Draft pull requests will be closed immediately.
+草稿 pull request 将被立即关闭。
 -->
 
-## Description
+## 描述
 
 <!--
-Describe here what your pull request changes and why it should happen. For small
-changes which are obvious this can just be a line or two - even the commit
-message is sometimes enough.
+在这里描述你的 pull request 改了什么，以及为什么应该这样改。对于
+显而易见的小改动，一两行即可，有时甚至提交信息就够了。
 -->

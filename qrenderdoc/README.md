@@ -1,3 +1,3 @@
-# Windows build
+# Windows 构建
 
-To build with PySide2 support or SSL support in Qt download [this zip](https://renderdoc.org/qrenderdoc_3rdparty.zip) and unzip to this folder (the 3rdparty/ in the zip should go into the 3rdparty/ folder here) before building.
+要构建带 PySide2 支持或 Qt 中 SSL 支持的版本，在构建前下载[这个 zip](https://renderdoc.org/qrenderdoc_3rdparty.zip) 并解压到本文件夹（zip 中的 3rdparty/ 应放入这里的 3rdparty/ 文件夹）。

@@ -2,31 +2,31 @@
 
 [![PyPI](https://img.shields.io/pypi/v/sphinx-copybutton.svg)](https://pypi.org/project/sphinx_copybutton/) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sphinx-copybutton.svg)](https://anaconda.org/conda-forge/sphinx-copybutton) | [![Documentation](https://readthedocs.org/projects/sphinx-copybutton/badge/?version=latest)](https://sphinx-copybutton.readthedocs.io/en/latest/?badge=latest)
 
-A small sphinx extension to add a "copy" button to code blocks.
+一个小型 sphinx 扩展，用于给代码块添加"复制"按钮。
 
-See [the sphinx-copybutton documentation](https://sphinx-copybutton.readthedocs.io/en/latest/) for more details!
+更多细节见 [sphinx-copybutton 文档](https://sphinx-copybutton.readthedocs.io/en/latest/)！
 
 ![Copy Button Demo](https://user-images.githubusercontent.com/1839645/150200219-73663c59-08fd-4185-b157-62f3769c02ac.gif)
 
-## Installation
+## 安装
 
-You can install `sphinx-copybutton` with `pip`:
+你可以用 `pip` 安装 `sphinx-copybutton`：
 
 ```bash
 pip install sphinx-copybutton
 ```
 
-Or with `conda` via `conda-forge`:
+或者通过 `conda-forge` 用 `conda` 安装：
 
 ```bash
 conda install -c conda-forge sphinx-copybutton
 ```
 
 
-## Usage
+## 用法
 
-In your `conf.py` configuration file, add `sphinx_copybutton` to your extensions list.
-E.g.:
+在你的 `conf.py` 配置文件中，把 `sphinx_copybutton` 加到扩展列表里。
+例如：
 
 ```python
 extensions = [
@@ -36,21 +36,19 @@ extensions = [
 ]
 ```
 
-When you build your site, your code blocks should now have little copy buttons to their
-right. Clicking the button will copy the code inside!
+构建站点时，你的代码块右侧就应该出现小小的复制按钮。点击按钮就会复制其中的代码！
 
-## Customization
+## 自定义
 
-If you'd like to customize the look of the copy buttons, you can over-write any of the
-CSS rules specified in the Sphinx-CopyButton CSS file ([link](sphinx_copybutton/_static/copybutton.css))
+如果你想自定义复制按钮的外观，可以覆盖 Sphinx-CopyButton CSS 文件中指定的任何 CSS 规则（[链接](sphinx_copybutton/_static/copybutton.css)）
 
-## Development
+## 开发
 
-Development should principally adhere to the [EBP Developer Conventions](https://github.com/executablebooks/.github/blob/master/CONTRIBUTING.md)
+开发应主要遵循 [EBP 开发者约定](https://github.com/executablebooks/.github/blob/master/CONTRIBUTING.md)
 
-Sphinx-Copybutton is [hosted on the pypi repository](https://pypi.org/project/sphinx-copybutton/).
-After a release - following the [EBP release instructions](https://github.com/executablebooks/.github/blob/master/CONTRIBUTING.md#releases-and-change-logs) - confirm that the new version of Sphinx-Copybutton [is posted to pypi](https://pypi.org/project/sphinx-copybutton/).
+Sphinx-Copybutton [托管在 pypi 仓库上](https://pypi.org/project/sphinx-copybutton/)。
+发布之后，按照 [EBP 发布说明](https://github.com/executablebooks/.github/blob/master/CONTRIBUTING.md#releases-and-change-logs)，确认新版本的 Sphinx-Copybutton [已发布到 pypi](https://pypi.org/project/sphinx-copybutton/)。
 
-## Acknowledgements
+## 致谢
 
-Many thanks to the excellent [clipboard.js library](https://clipboardjs.com/) for the lightweight javascript code that powers the copy button!
+非常感谢出色的 [clipboard.js 库](https://clipboardjs.com/)提供了驱动复制按钮的轻量级 javascript 代码！

@@ -1,37 +1,36 @@
-# Developing a change
+# 开发一个改动
 
-If you're making a tiny bugfix that only changes a few lines, then you don't really have to worry about how you structure your development or organise branches. You can just make your fix, open up a pull request, and everything can be handled from there on the fly.
+如果你做的是只改几行的小 bugfix，那么你其实不用太担心如何组织你的开发或分支。你只需修好、开一个 pull request，之后的一切都可以临机处理。
 
-# Coding style
+# 代码风格
 
-The coding style is primarily enforced by clang-format for things that can be easily checked by an automatic program. That includes brace style, indentation, spacing, etc.
+代码风格主要由 clang-format 对可被自动程序轻松检查的部分强制执行。这包括大括号风格、缩进、间距等。
 
-For things that clang-format can't cover, there are a few guidelines below but the golden rule is to try and match the surrounding code as much as possible. The code isn't perfectly consistent so you might see varying naming conventions, avoid adding code that is significantly different to the context.
+对于 clang-format 无法覆盖的部分，下面有一些准则，但黄金法则是尽量与周围的代码保持一致。代码并非完全一致，所以你可能会看到不同的命名约定，避免添加与上下文明显不同的代码。
 
-* `auto` is only allowed for types that are prohibitive: STL iterators and lambdas. Everywhere else you should use the explicit type.
-* Use `NULL` rather than `nullptr`.
-* If an `if` or `else` requires braces, add braces to all cases, rather than leaving one 'bare' without braces and another with braces.
-* Strings are always UTF-8, everywhere, unless they are wide strings which are only used for windows compatibility. Plain `char*` byte strings should be used everywhere in non-OS specific code, and are always treated as UTF-8 (never assume a string will be plain ASCII).
-* Limit STL use to a minimum. Allowed uses are `std::map`, `std::function`, `std::set`, algorithms like `std::sort` and `std::lower_bound`, and type-traits type checks like `std::is_same`. Use `rdcarray` instead of `std::vector` and `rdcstr` instead of `std::string`.
-* Don't use hungarian notation aside from `m_` for members. Some existing names will use `p` prefixes for pointers but it should be phased out in new code. The exception is when working with hooked functions where the official parameter names have hungarian notation.
+* `auto` 只允许用于类型冗长的场合：STL 迭代器和 lambda。其他所有地方都应使用显式类型。
+* 使用 `NULL` 而不是 `nullptr`。
+* 如果 `if` 或 `else` 需要大括号，就给所有分支都加大括号，而不是让一个不带大括号"裸奔"、另一个带大括号。
+* 字符串始终是 UTF-8，在所有地方都是，除非是仅用于 Windows 兼容性的宽字符串。在非 OS 特定代码中，到处都应使用普通的 `char*` 字节字符串，并且始终按 UTF-8 处理（永远不要假设字符串是纯 ASCII）。
+* 将 STL 的使用降到最低。允许使用的是 `std::map`、`std::function`、`std::set`、像 `std::sort` 和 `std::lower_bound` 这样的算法，以及像 `std::is_same` 这样的类型特征检查。使用 `rdcarray` 而不是 `std::vector`，使用 `rdcstr` 而不是 `std::string`。
+* 除了用于成员变量的 `m_` 之外，不要使用匈牙利命名法。一些现有名称会用 `p` 前缀表示指针，但新代码中应逐步淘汰。例外是处理被挂钩（hook）的函数时，官方参数名带有匈牙利命名法。
 
-# Planning larger changes
+# 规划较大的改动
 
-When making a larger change, there are more things to take into consideration. Your changes need to be compatible with the project on a larger scale, as well as making sure your development process can merge into the mainline development with other contributors and the project maintainer.
+做较大改动时，有更多需要考虑的事情。你的改动需要在大范围上与项目兼容，同时确保你的开发过程能与其他贡献者和项目维护者的主线开发合并。
 
-There are a few guidelines to follow to make sure that everyone can work together with as little friction as possible:
+有几条准则可以遵循，确保每个人都能尽量少摩擦地协作：
 
-Be proactive about communication. You can always [email me](mailto:baldurk@baldurk.org) about anything RenderDoc related including work you are planning, or currently doing. You can also open an issue to discuss a change. Staying in communication particularly with me can head off problems at a much earlier stage - perhaps a design you were planning would conflict with the direction of the project or with a better idea of the whole picture I can suggest something that would be more appropriate. It's much better to have a conversation and avoid spending time doing work that will be rejected or require rewrites at PR stage.
+主动沟通。你可以随时[给我发邮件](mailto:baldurk@baldurk.org)讨论任何与 RenderDoc 相关的事情，包括你正在计划或正在进行的工作。你也可以开一个 issue 来讨论某个改动。保持沟通、尤其是与我沟通，可以在更早的阶段避免问题，也许你计划的一个设计会与项目方向冲突，或者我能从更全面的角度建议一个更合适的方案。先沟通一次，避免花时间做会被拒绝或在 PR 阶段需要重写的工作，要好得多。
 
-Aim to merge your work to the main line in reasonably sized chunks. How big is a 'reasonably sized' chunk is debateable, but bear in mind that your code must be able to be reviewed. If in doubt you can always split the work into a smaller standalone chunk, but keeping any one PR under 1000 lines changed at the very most is a good mental limit. Keeping a large change on a branch means that you have to do more merges from the mainline to keep up to date, and increases the chance that your changes will diverge away from the project. The [LLVM developer policy](http://llvm.org/docs/DeveloperPolicy.html#incremental-development) describes this kind of workflow and its benefits much better than I can.
+目标是把你以合理大小的块合并到主线。多大算是"合理大小"可以商榷，但要记住你的代码必须能够被评审。如果拿不准，你总可以把工作拆成更小的独立块，但把任何一个 PR 的改动行数控制在最多 1000 行以内是个不错的心智上限。把一个大的改动长期放在分支上，意味着你必须做更多的从主线合并来保持同步，还会增加你的改动偏离项目的可能性。[LLVM 开发者政策](http://llvm.org/docs/DeveloperPolicy.html#incremental-development)对这种工作流及其好处描述得比我好得多。
 
-# Where to Start
+# 从哪里开始
 
-There are always plenty of things to do, if you'd like to chip in! Check out the [issues](https://github.com/baldurk/renderdoc/issues) for outstanding feature requests.
+如果你想出一份力，总有大量事情可做！查看 [issues](https://github.com/baldurk/renderdoc/issues) 了解待实现的功能请求。
 
-If you have a change you'd like to see make it into mainline, create a fork of renderdoc, make your changes to a branch, and open a pull request on github. You can look around for instructions on that - it's pretty simple.
+如果你有一个想让其进入主线的改动，fork renderdoc，把你的改动做在一个分支上，然后在 github 上开一个 pull request。你可以自己找找相关说明，这很简单。
 
-Have a clear idea of what your change is to do. This goes hand in hand with the above, but if your change involves a lot of work then it's better to split it up into smaller components that can be developed and merged individually, towards the larger goal. Doing this makes it more easily digestible for the rest of the people on the project as well as making it easier to review the changes when they land.
+对你的改动要做什么有清晰的想法。这与上面相辅相成，但如果你的改动涉及大量工作，最好把它拆成更小的组件，可以分别开发和合并，朝着更大的目标推进。这样做既让项目上的其他人更容易消化，也让改动落地时更容易评审。
 
-It's fine to land features one-by-one in different drivers. Historically there have been features that only worked on certain APIs so don't feel that you must implement any new feature on all APIs. At the same time, feature parity is a goal of the project so you should aim to implement features that can be later ported to other APIs where possible either by yourself or by others.
-
+在不同 driver 中逐个落地功能是没问题的。历史上有些功能只在某些 API 上工作，所以不要觉得你必须在所有 API 上实现任何新功能。同时，功能对等（feature parity）是项目的目标，所以只要可能，你就应力求实现那些之后可以移植到其他 API 的功能，无论是由你自己还是他人完成。

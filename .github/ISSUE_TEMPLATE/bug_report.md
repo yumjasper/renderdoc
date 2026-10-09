@@ -1,41 +1,41 @@
 ---
 name: Bug report
-about: Report a bug or problem encountered while using RenderDoc
+about: 报告使用 RenderDoc 时遇到的 bug 或问题
 ---
 <!--
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ 
-If you do not follow the guidelines, or do not use the template below, your issue will be closed with no exceptions!
+如果你不遵循准则，或不使用下面的模板，你的 issue 将被关闭，没有例外！
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ 
 
-The template below shows what you need to include in a good bug report, and you MUST use it. More information in the docs:
+下面的模板展示了一份好的 bug 报告需要包含哪些内容，并且你必须使用它。更多信息见文档：
 https://github.com/baldurk/renderdoc/blob/v1.x/docs/CONTRIBUTING/Filing-Issues.md
 
-It is *expressly* forbidden to ask for help with capturing copyrighted programs that you did not create and do not have the source code for.
+*明确*禁止就捕获你未创建且没有源代码的受版权保护程序寻求帮助。
 
-For example this includes capturing commercial games that you did not create, or capturing Google Maps or Google Earth.
+例如，这包括捕获你并未创建的商业游戏，或捕获 Google Maps 或 Google Earth。
 
-I'm happy to help, but you have to ensure I fully understand what you want and have the information I need. If you're unsure, please read the guide above for full information on what is expected for filing issues.
+我很乐意帮忙，但你必须确保我完全理解你想要什么，并拥有我需要的信息。如果你不确定，请阅读上面的指南，了解提交 issue 需要哪些完整信息。
 -->
 
-## Description of Bug
+## Bug 描述
 
-<!-- Here you can enter a description of what you are doing and what bug you are running into. -->
-<!-- This is a good time to describe what you want to do, what is actually happening, and what you'd expect to happen instead. -->
+<!-- 在这里你可以描述你在做什么，以及遇到了什么 bug。 -->
+<!-- 现在是描述你想做什么、实际发生了什么、以及你期望发生什么的好时机。 -->
 
-## Steps to reproduce
+## 复现步骤
 
-<!-- Please list the steps that someone can take to reproduce the bug. -->
+<!-- 请列出别人可以照做以复现该 bug 的步骤。 -->
 
-<!-- If you can share your capture or your application, PLEASE DO THAT NOW. It is by far the easiest way to demonstrate a bug. You can share it privately via email to baldurk@baldurk.org and mention it here. -->
-<!-- If you cannot share because of privacy or other reasons, please state that and give as much extra information as you can. -->
-<!-- Steps like "run my application" or "load this capture" are not useful unless you share the application or capture. Be specific! -->
+<!-- 如果你能分享你的抓帧文件或应用程序，请现在就做。这是演示 bug 最简便的方式。你可以通过邮件私下分享到 baldurk@baldurk.org 并在此提及。 -->
+<!-- 如果因隐私或其他原因无法分享，请说明并尽可能提供额外信息。 -->
+<!-- 像"运行我的应用程序"或"加载这个抓帧文件"这样的步骤，除非你分享应用程序或抓帧文件，否则是没用的。要具体！ -->
 
-## Environment
+## 环境
 
-<!-- if you are running a nightly build, list the date or commit hash for the version -->
+<!-- 如果你运行的是每日构建版，请列出该版本的日期或提交哈希 -->
 
-* RenderDoc version: XXX
-* Operating System: XXX
-* Graphics API: XXX
+* RenderDoc 版本：XXX
+* 操作系统：XXX
+* 图形 API：XXX
 
-<!-- More details here never hurt! For example your GPU, driver version, etc. -->
+<!-- 这里提供更多细节永远不会有坏处！例如你的 GPU、驱动版本等。 -->

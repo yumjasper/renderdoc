@@ -1,48 +1,47 @@
-# Preparing commits
+# 准备提交
 
-## Commit Messages
+## 提交信息
 
-Ensure commit messages have a single title of at most 72 characters, followed by a body if necessary:
+确保提交信息有一个不超过 72 个字符的单一标题，如有必要后面再跟正文：
 
 ```
-Short summary text, maximum of 72 characters. That's out to here ---->X
+简短摘要文本，最多 72 个字符。到这里为止 ---->X
 
-Longer paragraph that details the change and any logic behind needing
-to make the change, other impacts, future work etc. Keeping the title
-to 72 characters means it will display fully in git log and github logs.
+更长的段落，详述改动以及需要做此改动背后的逻辑、
+其他影响、未来工作等。把标题保持在 72 个字符以内，
+意味着它能在 git log 和 github 日志中完整显示。
 ```
 
-Merge commits should **not** be included in pull requests as they just muddy the history. Please use `git rebase` when bringing code up to date against latest `v1.x`.
+合并提交（merge commit）应**不**包含在 pull request 中，因为它们只会扰乱历史。在把代码更新到最新的 `v1.x` 时，请使用 `git rebase`。
 
-Likewise commits for code formatting or compile fixes should be squashed into the relevant commits that they update, rather than left in the history.
+同样，代码格式或编译修复的提交应被压缩（squash）进它们所更新的相关提交中，而不是留在历史里。
 
-## Code formatting
+## 代码格式
 
-To make things easier for everyone, I've adopted clang-format for keeping code consistently formatted.
+为了让大家更轻松，我采用了 clang-format 来保持代码格式一致。
 
 | :warning: |                                                                                                                                           | :warning: |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| :warning: | **Unfortunately clang-format output changes between versions even with the same config.**                                                 | :warning: |
-| :warning: | **I have fixed the version used for RenderDoc at [clang-format-15.0](https://github.com/llvm/llvm-project/releases/tag/llvmorg-15.0.7).** | :warning: |
-| :warning: | **This formatting is enforced by CI checks that run on PRs, so if you aren't running the same version locally it will show up there.**    | :warning: |
+| :warning: | **遗憾的是，即使是相同的配置，clang-format 的输出在不同版本之间也会变化。**                                                 | :warning: |
+| :warning: | **我已将 RenderDoc 使用的版本固定为 [clang-format-15.0](https://github.com/llvm/llvm-project/releases/tag/llvmorg-15.0.7)。** | :warning: |
+| :warning: | **此格式由在 PR 上运行的 CI 检查强制执行，所以如果你本地运行的不是相同版本，它会在那里显示出来。**    | :warning: |
 
-This version changed as of 2023-09-02, from clang-format-3.8 to clang-format-15.0. A statically linked binary of clang-format-15.0.7 for x64 windows and linux is committed to the repo under util/clangformat.
+此版本自 2023-09-02 起从 clang-format-3.8 变更。用于 x64 windows 和 linux 的 clang-format-15.0.7 静态链接二进制文件已提交到仓库的 util/clangformat 下。
 
-If you want to format a single file, run: `clang-format -i file.cpp`. If you want to format any changes you make before you commit them, you'll need python installed and then run: `git clang-format`. To clang-format the whole codebase, you can run the bash script `util/clang_format_all.sh` but be sure to squash any changes into the right commits.
+如果你想格式化单个文件，运行：`clang-format -i file.cpp`。如果你想在提交前格式化你所做的任何改动，你需要安装 python，然后运行：`git clang-format`。要对整个代码库执行 clang-format，你可以运行 bash 脚本 `util/clang_format_all.sh`，但务必把所有改动压缩进正确的提交中。
 
-There are instructions on how to set up git hooks or IDE integration [on the wiki](https://github.com/baldurk/renderdoc/wiki/Code-formatting-(using-clang-format)).
+关于如何设置 git hooks 或 IDE 集成的说明[在 wiki 上](https://github.com/baldurk/renderdoc/wiki/Code-formatting-(using-clang-format))。
 
-All intermediate commits should follow the formatting conventions. Having several intermediate commits with mismatched formatting then a single 'reformatted code' commit at the end makes history harder to read, which is an important tool for others to understand your code. It is much easier to enforce proper formatting on each commit as you go along, than to try and untangle and merge formatting changes in after the fact.
+所有中间提交都应遵循格式约定。如果中间有若干格式不一致的提交，最后再来一个"重新格式化代码"的提交，会让历史更难读懂，而历史是别人理解你代码的重要工具。随着进行在每次提交上强制正确格式，要比事后试图理清并合并格式改动容易得多。
 
-Since it's not covered by a pure formatting check, don't use overly modern C++ unnecessarily. Although the minimum compiler spec is now higher than it was in the past (as of March 2017) and modern features may be supported, some modern C++ constructs do not fit with the style of the rest of the code.
+由于纯格式检查并不覆盖这一点，不要不必要地使用过于现代的 C++。虽然最低编译器标准现在比过去更高（截至 2017 年 3 月），现代特性也可能被支持，但某些现代 C++ 构造与代码其余部分的风格不符。
 
-## Branch history
+## 分支历史
 
-Different people have different preferences on how history should be organised. Some people prefer to commit often and then squash down changes into a single commit after they've finished working. Others prefer to combine commits intermittently when they reach a logical boundary and or next step. Some like to avoid committing until they have a 'final' commit that they are ready to make.
+不同的人对历史应如何组织有不同的偏好。有些人喜欢频繁提交，然后完成工作后把改动压缩成单个提交。另一些人喜欢在达到逻辑边界或下一步时间歇性地合并提交。还有些人喜欢等到有一个准备好提交的"最终"提交之前都不提交。
 
-I'm flexible about whether branches are squashed or expanded when they are put up for PR. The history should be reasonable though; if you have a change that modifies a dozen files and changes hundreds of lines of code then it should not be squashed into a single commit. Likewise, intermittent changes where something was tried and then reverted, or minor fixes and tweaks as you go should be rebased and squashed together to form a more coherent whole. As a rule of thumb, try to keep your commit messages describing what they do roughly, even if it is a minor change. Commit messages like "fix stuff" or "compile fix" or any message with "WIP", "amend", "temp", etc should probably not remain in the final PR.
+对于分支在提出 PR 时是压缩还是展开，我很灵活。不过历史应当合理；如果你的改动修改了十几个文件、改了数百行代码，那它就不应被压缩成单个提交。同样，尝试后又回退的间歇性改动，或随进行的小修复和小调整，应被 rebase 并压缩在一起，形成一个更连贯的整体。经验法则是，尽量让你的提交信息大致描述它们做了什么，即使是个小改动。像 "fix stuff" 或 "compile fix" 这样的提交信息，或任何带有 "WIP"、"amend"、"temp" 等字样的信息，大概都不应留在最终的 PR 中。
 
-With fixes from a code review it's up to you whether you keep changes as a separate commit or squash them in. With the exception of formatting and compile fix commits, which as noted before should be squashed into the relevant commits.
+对于代码评审产生的修复，你自行决定是把改动保留为单独提交还是压缩进去。例外是格式和编译修复提交，如前所述它们应被压缩进相关的提交中。
 
-For overall scope of a change/branch read the [developing a change](Developing-Change.md) section.
-
+关于一个改动/分支的整体范围，请阅读[开发一个改动](Developing-Change.md)章节。
